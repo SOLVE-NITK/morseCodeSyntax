@@ -1,0 +1,217 @@
+  /*mathstyle.css*/  
+span.frac {
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+}
+span.frac > sup, span.frac > sub {
+display: block;
+font: inherit;
+padding: 0 0.3em;
+}
+span.frac > sup {border-bottom: 0.08em solid;}
+span.frac > span {display: none;}
+    
+	
+#simscreen
+{
+	position: relative;
+	left:0px;
+	top:0px;
+	height: 600px; 
+	width:800px;
+	border:solid 1px;
+}
+
+#title{
+	position:relative;
+	left: 0px;
+	top: 0px;
+	height:40px;
+	font-size: 24px;
+	text-align:center;
+	background-color: black;
+	font-family: verdana;
+	color: White;
+	text-transform: uppercase; 
+}
+
+#title h3
+{
+	padding-top:2px;
+	margin:0px;
+}	
+
+.simsubscreen
+{
+	position:absolute;
+	left:50px;
+	top:50px;
+	height:530px;
+	width:745px;
+}
+
+.incanvas
+{
+	margin:5px 0 0 5px;
+	padding:0;
+}
+
+#nextButton
+{
+	position:absolute;
+	left:750px;
+	top:530px;
+	cursor:pointer;
+}
+
+.circlebg
+{
+	border-radius:100%;
+	font-size:25px;
+	color:#fff;
+	text-align:center;
+	background:#000
+}
+
+.steptext
+{
+	display:inline;
+	font-size:14px;
+}
+
+#copyright{
+	position: absolute;
+	left:50px;
+	top: 580px;
+	font-size:12px
+}
+select{
+	width:160px;
+	font-weight: bold;
+	position:absolute;
+	left:310px;
+	top: 104px;
+     
+}
+.button{
+	
+	position: absolute;
+	left:240px;
+	top: 160px;
+}
+label{
+	position: absolute;
+	left:170px;
+	top: 103px;
+	font-size:15px
+}
+.plybtn{
+	position: absolute;
+	left:290px;
+	top: 250px;
+	width:60px;
+	height:55px;
+	border-radius:100%;
+	border-color: #000;
+	color: #000;
+	padding-top:30px;
+	background-color: #b5b2b2ba;
+
+}
+.plybtn::before{
+	position: absolute;
+	content: '';
+	border-top: transparent 10px solid;
+	border-bottom: transparent 10px solid;
+	border-left: #000 15px solid;
+	top:45%;
+	left:50%;
+	transform: translate(-40%,-50%);
+
+}
+.plybtn:disabled{
+	position: absolute;
+	left:290px;
+	top: 250px;
+	width:60px;
+	height:55px;
+	border-radius:100%;
+	border-color: #000;
+	color: #000;
+	padding-top:30px;
+}
+p.ad{
+	position: absolute;
+	left:273px;
+	top: 300px;
+	font-size: 80%;
+}
+p.morse{
+	position: absolute;
+	left:270px;
+	top: 150px;
+	
+	
+}
+p.dm{
+	position: absolute;
+	left: 160px;
+	top: 230px;
+    width: 60px;
+	height:35px;
+	border-style: solid;
+	border-width: medium;
+	border-radius: 10px;
+	text-align: center;
+    text-decoration: solid;
+	font-style: bold;
+	border: 2.5px solid black;
+	
+	font-size: larger;
+	padding-top: 2%;
+	padding-bottom: -2%;
+	padding-left: -2%;
+   padding-right: -2%;
+   background-color: rgb(196, 203, 203);
+}
+
+
+.morsedisplay1{
+	position: absolute;
+	left: 420px;
+	top: 250px;
+    width: 150px;
+	height:50px;
+	font-size: large;
+}
+.button{
+	position: absolute;
+	left: 250px;
+	top: 220px;
+    width: 80px;
+	height:25px;
+}
+.repeat1{
+	position: absolute;
+	left: 290px;
+	top: 450px;
+    width: 60px;
+	height:55px;
+	border-radius: 100%;
+	
+}
+.warning{
+	position: absolute;
+	left:220px;
+	top: 151px;
+	font-size:14px
+}
+.pd{
+	/* margin: 40px; */
+	padding-right: 35px;
+}
+.pd1{
+	/* margin: 40px; */
+	padding-right: 35px;
+}

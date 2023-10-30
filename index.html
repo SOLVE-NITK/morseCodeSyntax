@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta 	 charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/script.js"></script>
+<style>
+.popup
+{
+	border-radius:5px;
+	background-color:black;
+	color:white;
+	padding:5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  left:102px;
+  visibility: hidden;
+  width: 550px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 10px 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+ /*text-align:center; */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h3>Exploring Morse Code: Syntax
+</h3></div>
+
+<div class="simsubscreen" id="canvas0" >
+	<h4 class="incanvas">Objective:</h4>
+	<p class="incanvas" style="font-size:14px;">To acquire the ability to receive and understand Morse code transmissions for syntax.
+	</p><br/>
+	<br>
+	<br>
+	<br>
+	<h4 class="incanvas">Description:</h4>
+	
+	
+	<p  class="pd1" style="text-align:justify;">Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks that can be directly understood by a skilled listener or observer without special equipment. It is a system of dots and dashes that can be used to send messages over long distances. It was originally used by telegraph operators to send messages using electrical pulses. Radio communicators later adapted the code to use it as an auditory language.
+</p>
+
+<p class="pd" style="text-align:justify;">Morse code can be used to send messages using Wires, Radios, Sound, Light. Messages can be sent by Tapping, Drumming, Buzzing, Clicking, or flashing light. Morse code is still used today by many ham radio operators. It's a recognised mode of communication in the amateur radio community, and some operators enjoy the challenge and efficiency of using Morse code for long-distance communication. It is also used in emergency signals and in technology to help disabled people communicate..</p>	
+</div>
+
+<div id="nav">
+	
+	<img id="nextButton" onclick="navNext()" src="images/Next.png" alt="" /></a>
+
+</div>
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;1&nbsp;</span>
+	<p class="steptext">&nbsp;Select a syntax from the dropdown menu.</p>
+	<br><br><br><br><br><br>
+
+
+	<label for="character">Select the syntax:</label>
+	<select name="character" id="myselect" onchange="morseTocode()">
+		<option value="selectchar" > select character</option>
+		<option value="slash">/</option>
+		<option value="period">.</option>
+		<option value="comma">,</option>
+        <option value="questionmark">?</option>
+		<option value="apostrophe">'</option>
+		<option value="colon">:</option>
+		<option value="semicolon">;</option>
+        <option value="doubledash">=</option>
+		<option value="plus">+</option>
+		<option value="exclamation">!</option>
+	    <option value="parethesis_open">(</option>
+		<option value="parethesis_close">)</option>
+		<option value="ampersand">&</option>
+		<option value="minus">-</option>
+        <option value="underscore">_</option>
+		<option value='quotation'>"</option>
+		<option value='dollar'>$</option>
+		<option value="atsign">@</option>
+	  
+	  
+	</select>
+      
+	<br><br>
+	<p id="warningMessage" class="warning" style="color: red;"></p>
+	<div id="nav">
+		
+	<button type="submit" onclick="character()" id="submit" class="button" value="Submit">Submit</button>
+	
+	</div>
+	</div>
+
+</div>
+   <div class="simsubscreen" id="canvas2" name="canvas2" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;2&nbsp;</span>
+	<p class="steptext">&nbsp;Click on the play button to observe the Morse code equivalent to syntax entered.
+	</p>
+	<br><br><br><br><br><br>
+ 
+	 <div>
+		<p class="morse" id="morse1" ></p>
+		<button  class="plybtn" id="ply" onclick="play()" >Play</button>
+		<p id="mdisp" class="mdisplay" style="border: black;"></p>
+
+		
+		<audio id=dotAudio src="morse (.).wav"></audio>
+		<audio id=dashAudio src="morse (-).wav"></audio>
+
+		<p class="ad">keep audio on
+		</p>
+		<p class="dm" id="dm1" style="align-items: center;"></p>
+        <!-- morse code  -->
+		<p><span  id="morsedisplay" class="morsedisplay1" > </span></p> 		
+		
+		<button id="repeat" class="repeat1" onclick="repeat()" style="display: none;">
+			
+			<img src="repost-regular-24 (1).png" style="width: 40px;height: 20px;"  >
+			Repeat
+		
+		</button>
+	 </div>
+	
+</div>
+
+
+<img class ="" id="arrow1" style="visibility:hidden;"/>
+
+<div id="copyright"> &copy; <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+</div>
+</body> 
+</html>
