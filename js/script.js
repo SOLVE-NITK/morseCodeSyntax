@@ -150,7 +150,7 @@ let selectedMorseCode = characterToMorse[selectedOption];
    const playbutton = document.getElementById('ply');
    const intervalDuration = 1000;  // 1 second interval
   
-
+   morsedisplay.innerHTML  = ''; 
 
 
     let currentIndex = 0;
@@ -160,16 +160,26 @@ let selectedMorseCode = characterToMorse[selectedOption];
 
 	function seqMorse(){
 		
+		
 	if (currentIndex < selectedMorseCode.length) {
 	playbutton.disabled = true;
 		
 		const currentChar = selectedMorseCode[currentIndex];
-		
+		const Context = new AudioContext(); 
+
+
+		var oscillator = Context.createOscillator();
+		oscillator.frequency.value=600;
+		oscillator.connect(Context.destination);
+		oscillator.start();
 		// Play audio for dots and dashes
 		if (currentChar === '.') {
-		  dotAudio.play();
+			setTimeout(function() { oscillator.stop();},100);
+		//   dotAudio.play();
 		} else if (currentChar === '-') {
-		  dashAudio.play();
+			setTimeout(function() { oscillator.stop();},300);
+
+		//   dashAudio.play();
 		}
 		
     // Update the Morse code being displayed
@@ -189,7 +199,7 @@ let selectedMorseCode = characterToMorse[selectedOption];
        console.log("hello")
 	//    selectedOption = selectElement.value;
 	   
-	   morsedisplay.innerHTML  = ''; 
+	//    morsedisplay.innerHTML  = ''; 
     // Optionally, you can stop the interval here
 	document.getElementById("ply").addEventListener('click',function (){
 		document.getElementById("repeat").style.visibility="visible";
@@ -205,6 +215,10 @@ let selectedMorseCode = characterToMorse[selectedOption];
   }
 }
  seqMorse();
+ 
+ document.getElementById('repeat').addEventListener('click',function(){
+	morsedisplay.innerHTML  = '';
+ });
 
 // selectElement.addEventListener('change', function () {
 //  selectedOption = selectElement.value;

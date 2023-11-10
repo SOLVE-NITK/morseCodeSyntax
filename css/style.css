@@ -87,18 +87,24 @@ span.frac > span {display: none;}
 	font-size:12px
 }
 select{
-	width:160px;
-	font-weight: bold;
+	width:150px;
+	/* font-weight: bold; */
 	position:absolute;
 	left:310px;
-	top: 104px;
-     
+	top: 96px;
+	scroll-padding-left: 2%;
+	/* padding-bottom: 2%; */
+	scroll-padding-top: 2%;
+	font-weight: 600;
+	font-size: 15px;
+	cursor: pointer;
 }
 .button{
 	
 	position: absolute;
 	left:240px;
 	top: 160px;
+	cursor: pointer;
 }
 label{
 	position: absolute;
@@ -117,6 +123,7 @@ label{
 	color: #000;
 	padding-top:30px;
 	background-color: #b5b2b2ba;
+	cursor: pointer;
 
 }
 .plybtn::before{
@@ -128,6 +135,7 @@ label{
 	top:45%;
 	left:50%;
 	transform: translate(-40%,-50%);
+	cursor: pointer;
 
 }
 .plybtn:disabled{
@@ -174,16 +182,20 @@ p.dm{
 	padding-left: -2%;
    padding-right: -2%;
    background-color: rgb(196, 203, 203);
+   font-weight: 600;
+	font-size: 20px;
+
 }
 
 
 .morsedisplay1{
 	position: absolute;
 	left: 420px;
-	top: 250px;
+	top: 260px;
     width: 150px;
 	height:50px;
-	font-size: large;
+	font-weight: 700;
+	font-size: 20px;
 }
 .button{
 	position: absolute;
@@ -199,6 +211,10 @@ p.dm{
     width: 60px;
 	height:55px;
 	border-radius: 100%;
+	cursor: pointer;
+    /* font-family: roboto;  */
+	font-style:bold;
+	font-family: 'Roboto';
 	
 }
 .warning{
@@ -214,4 +230,16 @@ p.dm{
 .pd1{
 	/* margin: 40px; */
 	padding-right: 35px;
+}
+
+.opDoubledash{
+	font-weight: 600;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.repeatname{
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size: small;
 }
