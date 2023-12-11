@@ -73,41 +73,69 @@
 <div class="simsubscreen" id="canvas1" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;1&nbsp;</span>
-	<p class="steptext">&nbsp;Select a syntax from the dropdown menu.</p>
+	<p class="steptext">&nbsp;Select a syntax from the Table below.</p>
 	<br><br><br><br><br><br>
 
 
+	
+
 	<label for="character">Select the syntax:</label>
-	<select name="character" id="myselect" onchange="morseTocode()" style="padding: 5px;padding-top: 7px;padding-bottom: 7px;">
-		<option value="selectchar" > select character</option>
-		<option value="slash" class="opDoubledash">/</option>
-		<option  value="period" class="opDoubledash">.</option>
-		<option value="comma" class="opDoubledash">,</option>
-        <option value="questionmark" class="opDoubledash">?</option>
-		<option value="apostrophe" class="opDoubledash">'</option>
-		<option value="colon" class="opDoubledash">:</option>
-		<option value="semicolon" class="opDoubledash">;</option>
-        <option value="doubledash" class="opDoubledash">=</option>
-		<option value="plus" class="opDoubledash">+</option>
-		<option value="exclamation" class="opDoubledash">!</option>
-	    <option value="parethesis_open" class="opDoubledash">(</option>
-		<option value="parethesis_close" class="opDoubledash">)</option>
-		<option value="ampersand" class="opDoubledash">&</option>
-		<option value="minus" class="opDoubledash">-</option>
-        <option value="underscore" class="opDoubledash">_</option>
-		<option value='quotation' class="opDoubledash">"</option>
-		<option value='dollar' class="opDoubledash">$</option>
-		<option value="atsign" class="opDoubledash">@</option>
+
+	
+	<button id="clickHidden" class="clickhere" onclick="Table();clickHidden()">Click Here!</button>
+<div class="syntaxMorse" id="Syntax" style="visibility: hidden;"></div>
+<div>
+<button type="submit" onclick="navNext();resetDiv()" id="submit" style="visibility:hidden;" class="submitButton" style="visibility:hidden;">Submit</button>
+	<div id="container" style="visibility:hidden;">
+		
+		<p id="morseCodeDisplay" class="morseCodeDisplay"></p>
+		
+		<table id="tableButton"  >
+		  <tr>
+			  <td><button id="selectbutton" onclick="buttonClick(1, 1);ButtonMorse();movingTable()">/</button></td>
+			  <td><button id="selectbutton" onclick="buttonClick(1, 2);ButtonMorse();movingTable()">.</button></td>
+			  <td><button id="selectbutton" onclick="buttonClick(1, 3);ButtonMorse();movingTable()">,</button></td>
+			 <td><button id="selectbutton" onclick="buttonClick(1, 4);ButtonMorse();movingTable()">?</button></td>
+			</tr>
+			<tr>
+			  <td><button id="selectbutton" onclick="buttonClick(2, 1);ButtonMorse();movingTable()">'</button></td>
+		      <td><button id="selectbutton" onclick="buttonClick(2, 2);ButtonMorse();movingTable()">:</button></td>
+			 <td><button id="selectbutton" onclick="buttonClick(2, 3);ButtonMorse();movingTable()">;</button></td>
+			  <td><button id="selectbutton" onclick="buttonClick(2, 4);ButtonMorse();movingTable()">=</button></td>
+			</tr>
+			<tr>
+			  <td><button id="selectbutton" onclick="buttonClick(3, 1);ButtonMorse();movingTable()">+</button></td>
+			 <td><button id="selectbutton" onclick="buttonClick(3, 2);ButtonMorse();movingTable()">!</button></td>
+		     <td><button id="selectbutton" onclick="buttonClick(3, 3);ButtonMorse();movingTable()">(</button></td>
+		     <td><button id="selectbutton" onclick="buttonClick(3, 4);ButtonMorse();movingTable()">)</button></td>
+			</tr>
+			<tr>
+				<td><button id="selectbutton" onclick="buttonClick(4, 1);ButtonMorse();movingTable()">&</button></td>
+				<td><button id="selectbutton" onclick="buttonClick(4, 2);ButtonMorse();movingTable()">-</button></td>
+				<td><button id="selectbutton" onclick="buttonClick(4, 3);ButtonMorse();movingTable()">_</button></td>
+		        <td><button id="selectbutton" onclick="buttonClick(4, 4);ButtonMorse();movingTable()">"</button></td>
+		</tr>
+		<tr>     
+			     <td ></td>
+				<td ><button  id="selectbutton" onclick="buttonClick(5, 1);ButtonMorse();movingTable()">$</button></td>
+				<td><button id="selectbutton" onclick="buttonClick(5, 2);ButtonMorse();movingTable()">@</button></td>
+			
+				</tr>
+		</table>
+	
+	  </div>
+     
 	  
-	  
-	</select>
+	
+
       
 	<br><br>
-	<p id="warningMessage" class="warning" style="color: red;"></p>
-	<div id="nav">
+	<!-- <p id="warningMessage" class="warning" style="color: red;"></p>
+	<div id="nav"> -->
 		
-	<button type="submit" onclick="character()" id="submit" class="button" value="Submit">Submit</button>
-	
+		<!-- <button type="submit" onclick="navNext()" id="submit" class="button" value="Submit" style="visibility:hidden;">Submit</button> -->
+<br>
+</div>
 	</div>
 	</div>
 
@@ -121,9 +149,10 @@
  
 	 <div>
 		<p class="morse" id="morse1" ></p>
-		<button  class="plybtn" id="ply" onclick="play()" >Play</button>
+		<button  class="plybtn" id="ply"  >Play</button>
 		<p id="mdisp" class="mdisplay" style="border: black;"></p>
-
+        <p class="selected">Selected Syntax:</p>
+		<P id="selctedSyntax" class="selctedSyntax"></P>
 		
 		<!--  -->
 
@@ -131,7 +160,8 @@
 		</p>
 		<p class="dm" id="dm1" style="align-items: center;"></p>
         <!-- morse code  -->
-		<p><span  id="morsedisplay" class="morsedisplay1" > </span></p> 		
+         <p id="morseCodeDisplay1" class="morseCodeDisplay1"></p>
+		<!-- <p><span  id="morsedisplay" class="morsedisplay1" > </span></p> 		 -->
 		
 		<button id="repeat" class="repeat1" onclick="repeat()" style="display: none;" >
 			<span class="material-symbols-outlined">

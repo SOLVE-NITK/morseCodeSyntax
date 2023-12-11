@@ -98,14 +98,12 @@ select{
 	font-weight: 600;
 	font-size: 15px;
 	cursor: pointer;
+	padding: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
-.button{
-	
-	position: absolute;
-	left:240px;
-	top: 160px;
-	cursor: pointer;
-}
+
+
 label{
 	position: absolute;
 	left:170px;
@@ -115,7 +113,7 @@ label{
 .plybtn{
 	position: absolute;
 	left:290px;
-	top: 250px;
+	top: 265px;
 	width:60px;
 	height:55px;
 	border-radius:100%;
@@ -141,7 +139,7 @@ label{
 .plybtn:disabled{
 	position: absolute;
 	left:290px;
-	top: 250px;
+	top: 265px;
 	width:60px;
 	height:55px;
 	border-radius:100%;
@@ -152,7 +150,7 @@ label{
 p.ad{
 	position: absolute;
 	left:273px;
-	top: 300px;
+	top: 322px;
 	font-size: 80%;
 }
 p.morse{
@@ -165,7 +163,7 @@ p.morse{
 p.dm{
 	position: absolute;
 	left: 160px;
-	top: 230px;
+	top: 250px;
     width: 60px;
 	height:35px;
 	border-style: solid;
@@ -198,11 +196,12 @@ p.dm{
 	font-size: 20px;
 }
 .button{
-	position: absolute;
-	left: 250px;
-	top: 220px;
-    width: 80px;
+	position:relative;
+	left: 330px;
+	top: -290px;
+	width: 80px;
 	height:25px;
+	margin-bottom: 20px;
 }
 .repeat1{
 	position: absolute;
@@ -215,6 +214,7 @@ p.dm{
     /* font-family: roboto;  */
 	font-style:bold;
 	font-family: 'Roboto';
+	border-color: #000;
 	
 }
 .warning{
@@ -243,3 +243,126 @@ p.dm{
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size: small;
 }
+.clickhere{
+	position:absolute;
+	left:310px;
+	top: 96px;
+	padding: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+#container {
+	width: 40%;
+	margin: 20px auto; /* Center the container */
+	border: 2px solid #ccc; /* Add a border around the container */
+	padding: 10px; /* Add some padding to the container */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+	position: relative;
+	transition: transform 0.3s ease;
+	top: -40px;
+	border-radius: 2%;
+  }
+
+  table {
+	border-collapse: collapse;
+	width: auto;
+	border-radius: 5px;
+	/* border: 1px solid black; */
+    /* padding: 10px; */
+  }
+
+  th, td {
+	padding: 8px;
+  }
+/* td{
+	display:inline-flex ;
+} */
+  /* button {
+	/* width: 100%; */
+	/* padding: 8px; */
+
+  /* } */ 
+  #selectbutton{
+	width: 58px;
+	font-weight: bolder;
+	font-size: 17px;
+	
+	padding: 8px;
+	/* border: #000 ; */
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  #selectbutton:hover{
+	background-color: #aca5a5;
+  }
+
+.morseCodeDisplay{
+	position: absolute;
+	border: #000;
+	background-color: antiquewhite;
+	
+}
+.morseCodeDisplay1{
+	position: absolute;
+	border: #000;
+	left: 420px;
+	top: 210px;
+    width: 150px;
+	height:50px;
+	font-weight: 700;
+	font-size: 45px;
+
+
+}
+.selected{
+	position: absolute;
+	left: 220px;
+	top: 150px;
+
+}
+.selctedSyntax{
+	position: absolute;
+	left: 370px;
+	top: 140px;
+	font-weight: 600;
+	font-size: 20px;
+	padding: 5px;
+	padding-left: 9px;
+	padding-right: 9px;
+	border: solid 1px;
+
+}
+.syntaxMorse
+{
+	position: absolute;
+	left: 340px;
+	top: 99px;
+	font-weight: 700;
+
+	padding: 5px;
+	height: 20px;
+	width: 30px;
+	text-align: center;
+	border:solid 1px black;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	background-color: rgb(196, 203, 203);
+}
+.selectbutton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 30px;
+	margin-left: 30px;
+}
+.submitButton{
+    position:relative;
+	left: 45%;
+    margin-top: 20px;
+}
+/* .dollarButton
+{
+	margin-left: 100px;
+}
+ */
